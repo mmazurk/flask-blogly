@@ -6,7 +6,6 @@ db = SQLAlchemy()
 
 def connect_db(app):
     """Connect to database."""
-
     db.app = app
     db.init_app(app)
 
@@ -29,7 +28,7 @@ class User(db.Model):
     def __repr__(self):
         """show info about users"""
         s = self
-        return f"<User {s.id} {s.first_name} {s.last_name} {s.image_url}>"
+        return f"<User {s.first_name} {s.last_name} {s.image_url}>"
     
     @classmethod
     def get_all(cls):

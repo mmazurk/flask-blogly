@@ -4,12 +4,12 @@
   <h1>Users</h1>
   <ul>
     {% for user in users %}
-    <li><a href="/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>
+    <li><a href="/users/{{user.user_id}}">{{user.first_name}} {{user.last_name}}</a></li>
     {% endfor %}
   </ul>
   <div>
     <div>
-      <a href="/users/new" class="btn btn-primary stretched-link">Add User</a>
+      <a href="/users/new" class="btn btn-primary">Add User</a>
     </div>
   </div>
 </div>
