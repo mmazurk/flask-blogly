@@ -1,0 +1,30 @@
+{% extends "base.html" %} {%block title%} Users {% endblock %} {%block content%}
+
+<div class="container my-5">
+    <form action="/users/{{user.user_id}}/posts/new" method="POST">
+
+            <h1>Create Post for {{user.first_name}} {{user.last_name}}</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="post-title" class="my-2 ps-4">Title: </label>
+                        <input type="text" size=53 id="post-title" name="post-title" placeholder="Enter post title">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="post-content" class="my-2">Content: </label>
+                        <textarea id="post-content" name="post-content" rows="4" cols="55" placeholder = "yay, fun!"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <a href="/users/{{user.user_id}}" class="btn btn-danger">Cancel</a>
+
+
+        </div>
+    </form>
+
+{% endblock %}

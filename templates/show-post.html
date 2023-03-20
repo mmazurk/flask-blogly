@@ -1,0 +1,12 @@
+{% extends "base.html" %} {%block title%} Users {% endblock %} {%block content%}
+
+<div class="container m-5 p-5 border border-dark">
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}} </p>
+    <p class="font-italic">By {{post.user.first_name}} {{post.user.last_name}}</p>
+    <a href="/users" class="btn btn-warning w-65">Cancel</a>
+    <a href="/users" class="btn btn-primary w-65">Edit</a>
+    <a href="/users" class="btn btn-danger w-65">Delete</a>
+</div>
+
+{% endblock %}

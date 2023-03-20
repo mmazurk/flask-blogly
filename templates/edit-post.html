@@ -1,0 +1,31 @@
+{% extends "base.html" %} {%block title%} Users {% endblock %} {%block content%}
+
+   
+    <div class="container my-5">
+        <form action="/new" method="POST">
+    
+                <h1>Edit Post</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="first-name" class="my-2 ps-4">Title: </label>
+                            <input type="text" size=53 id="first-name" name="first-name" placeholder="Enter a first name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="last-name" class="my-2">Content: </label>
+                            <textarea id="last-name" name="last-name" rows="4" cols="55"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button class="btn btn-danger">Cancel</button>
+    
+            </div>
+        </form>
+
+        
+{% endblock %}
